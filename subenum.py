@@ -118,7 +118,7 @@ def save_results(subdomains, domain, output_dir="subenum_results"):
             "subdomains": list(subdomains)
         }, f, indent=2)
 
-    console.print(f"✅ All results saved to: {output_dir}/")
+    console.print(f"📥 All results saved to: {output_dir}/")
 
 def print_summary(subdomains, domain):
     panel = Panel(
