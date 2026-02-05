@@ -5,7 +5,7 @@ I built it with one clear idea in mind: **fast recon, low resource usage, zero n
 
 No brute force.  
 No touching the target.  
-No private APIs or weird API keys.
+No private APIs, no weird API keys to hunt down.
 
 Just passive sources, clean results, and a tool you can run almost anywhere.
 
@@ -37,18 +37,18 @@ This tool is for you.
 
 ---
 
-## How it works
+#### How it works
 
-SubEnum pulls data from **passive sources** like:
+SubEnum pulls subdomains from reliable **passive sources**:
 - crt.sh  
 - AlienVault OTX  
 - HackerTarget  
 - ThreatMiner  
 
-All requests are asynchronous, fast, and respectful.
+Requests are asynchronous, fast, and kept minimal.
 
 No scanning.  
-No brute forcing.  
+No brute force.  
 No noise.
 
 ---
@@ -63,18 +63,18 @@ python3 subenum.py example.com --timeout 10 --output-dir results
 
 ---
 
-Output
+## Output
 
-Results are saved in a simple structure:
+Results are saved in a clean and simple structure:
 
-subenum_example.com.txt → clean list of subdomains
+- `subenum_example.com.txt` — clean list of subdomains  
+- `subenum_example.com_stats.json` — basic stats for automation and chaining  
 
-subenum_example.com_stats.json → basic stats for automation or chaining
+Perfect to pipe into tools like:
+- httpx
+- nuclei
+- fuzzers
 
-Perfect to pipe into:
+Or whatever your workflow looks like.
 
-httpx
-nuclei
-fuzzers
-or whatever your workflow looks like 
 
